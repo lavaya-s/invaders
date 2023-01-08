@@ -53,7 +53,8 @@ class Game(object):
         self.alien_explosion_sheet=pygame.image.load('F:/invaders/alien_explosion.png')
         self.alien_explosion_graphics=self.alien_explosion_sheet.subsurface(0,0,94,96)
         self.explode=False
-        self.explode_pos=0;self.alienexplode=False
+        self.explode_pos=0
+        self.alienexplode=False
         self.alien_explode_pos=0
         #current sound code is commented out due to issues with pygame
         #pygame.mixer.music.load('F:\invaders\Dead_city.mp3')
