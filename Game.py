@@ -4,7 +4,6 @@ from Ammo import Ammo
 from Block import Block
 from Player import Player,GameState
 from Alien import Alien
-#regular global variable at the top
 BLACK=(0,0,0)
 BLUE=(0,0,255)
 WHITE=(255,255,255)
