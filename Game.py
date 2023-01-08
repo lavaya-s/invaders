@@ -268,7 +268,6 @@ class Game(object):
                     self.next_round()
             self.splash_screen()
         pygame.quit()
-    
 if __name__=='__main__':
     pv=Game()
     pv.main_loop()
