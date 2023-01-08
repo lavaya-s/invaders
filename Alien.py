@@ -12,7 +12,6 @@ class Alien(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image=pygame.image.load('F:/invaders/Spaceship16.png').convert()
         self.image.set_colorkey(WHITE)
-
         self.size=(ALIEN_SIZE)
         self.image=pygame.Surface(ALIEN_SIZE)
         self.rect=self.image.get_rect()
