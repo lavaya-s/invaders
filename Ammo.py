@@ -12,4 +12,3 @@ class Ammo(pygame.sprite.Sprite):
         self.rect.y+=self.vector*self.speed
         if self.rect.y<0 or self.rect.y>RES[1]:
             self.kill()
-            
