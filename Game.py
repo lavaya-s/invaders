@@ -1,4 +1,3 @@
-
 import pygame
 import random
 from Ammo import Ammo
@@ -56,18 +55,7 @@ class Game(object):
         self.explode_pos=0
         self.alienexplode=False
         self.alien_explode_pos=0
-        #current sound code is commented out due to issues with pygame
-        #pygame.mixer.music.load('F:\invaders\Dead_city.mp3')
-        #pygame.mixer.music.play(-1)
-        #pygame.mixer.music.set_volume(0.7)
-        #self.bullet_f=pygame.mixer.Sound('F:\invaders\pivaders_data_sound_._medetix__pc-bitcrushed-lazer-beam.ogg')
-        #self.explosion_fx=pygame.mixer.Sound('F:\invaders\pivaders_data_sound_._timgormly__8-bit-explosion.ogg')
-        #self.explosion_fx.set_volume(0.5)
         self.explodey_alien=[]
-
-        #Alien.image=pygame.image.load('F:/invaders/Spaceship16.png').convert()
-        #Alien.image.set_colorkey(WHITE)
-        #self.alien=pygame.image.load('F:/invaders/Spaceship16.png').convert()
         GameState.end_game=False
         GameState.start_screen=True
         GameState.vector=0
@@ -107,7 +95,6 @@ class Game(object):
                     self.alien_wave(0)
                 else:
                     GameState.shoot_bullet=True
-                    #self.bullet_f.play()
     def animate_player(self):
         if self.animate_right:
             if self.ani_pos<10:
@@ -150,7 +137,6 @@ class Game(object):
             self.screen.blit(self.intro_screen,[0,0])
             self.screen.blit(self.intro_font.render('invaders',1,WHITE),(265,120))
             self.screen.blit(self.game_font.render('PRESS SPACE TO PLAY',1,WHITE),(274,191))
-#I'm not sure if this continues here
             pygame.display.flip()
             self.control()
     def make_player(self):
@@ -251,11 +237,9 @@ class Game(object):
             self.explodey_alien.append(z.rect.x)
             self.explodey_alien.append(z.rect.y)
             self.score+=10
-            #self.explosion_fx.play()
         if pygame.sprite.groupcollide(self.player_group,self.missile_group,False,True):
             self.lives-=1
             self.explode=True
-            #self.explosion_fx.play()
     def next_round(self):
         self.explode=False
         self.alienexplode=False
